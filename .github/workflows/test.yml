@@ -1,0 +1,33 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    name: Verify celo-dice-roll-sdk from npm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify package
+        run: |
+          set +e
+          for i in {1..3}; do
+            DIR=$(mktemp -d)
+            cd "$DIR"
+            npm init -y > /dev/null 2>&1
+            npm install celo-dice-roll-sdk --no-save --no-package-lock --quiet 2>/dev/null
+            node -e "const m = require('celo-dice-roll-sdk'); console.log('Run $i: celo-dice-roll-sdk OK');"
+            cd /
+            rm -rf "$DIR"
+            sleep 1
+          done
+          echo "Verification complete."
