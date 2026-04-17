@@ -1,0 +1,50 @@
+{
+  "name": "celo-dice-roll-sdk",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for the Celo Dice Roll MiniApp",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "celo",
+    "blockchain",
+    "web3",
+    "sdk",
+    "smart-contract",
+    "solidity",
+    "evm",
+    "dapp",
+    "typescript",
+    "minipay",
+    "dice",
+    "game"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "ethers": "^6.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "brventonbeshers-ship-it",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brventonbeshers-ship-it/celo-dice-roll-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brventonbeshers-ship-it/celo-dice-roll-sdk/issues"
+  },
+  "homepage": "https://github.com/brventonbeshers-ship-it/celo-dice-roll-sdk#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
