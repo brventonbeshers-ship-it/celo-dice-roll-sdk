@@ -2,7 +2,7 @@ name: Release Verification
 
 on:
   schedule:
-    - cron: '44/20 * * * *'
+    - cron: '44 * * * *'
   workflow_dispatch:
 
 jobs:
