@@ -1,6 +1,6 @@
 {
   "name": "celo-dice-roll-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript SDK for the Celo Dice Roll MiniApp",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
